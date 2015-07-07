@@ -1,0 +1,16 @@
+PROGRAM= procae
+
+SOURCES.c= procae.c procutil.c
+
+CFLAGS = -I. -g -O2 -Wall
+
+OBJECTS= $(SOURCES.c:.c=.o)
+
+all: $(OBJECTS)
+	gcc -o $(PROGRAM) $(OBJECTS)
+
+
+clean: 
+	rm -f $(PROGRAM) $(OBJECTS)
+
+ 
